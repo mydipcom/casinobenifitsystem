@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "";
+}
+@model DIPSky.Plugin.Payments.PayPalDirect.Models.PaymentInfoModel
+@using DIPSky.Web.Framework;
+@Html.DIPSkyLabelFor(model => model.CreditCardTypes, false)
+@Html.DropDownListFor(model => model.CreditCardType, Model.CreditCardTypes)
+@Html.DIPSkyLabelFor(model => model.CardholderName, false)
+@Html.TextBoxFor(model => model.CardholderName, new { autocomplete = "off" })
+@Html.ValidationMessageFor(model => model.CardholderName)
+@Html.DIPSkyLabelFor(model => model.CardNumber, false)
+@Html.TextBoxFor(model => model.CardNumber, new { autocomplete = "off", maxlength = 22 })
+@Html.ValidationMessageFor(model => model.CardNumber)
+@Html.DIPSkyLabelFor(model => model.ExpireMonth, false)
+<div data-role="fieldcontain">
+    <fieldset data-role="controlgroup" data-type="horizontal">
+        @Html.DropDownListFor(model => model.ExpireMonth, Model.ExpireMonths)
+        @Html.DropDownListFor(model => model.ExpireYear, Model.ExpireYears)
+    </fieldset>
+</div>
+@Html.DIPSkyLabelFor(model => model.CardCode, false)
+@Html.TextBoxFor(model => model.CardCode, new { style = "Width: 60px;", autocomplete = "off", maxlength = 4 })
+@Html.ValidationMessageFor(model => model.CardCode)

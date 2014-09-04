@@ -1,0 +1,2 @@
+﻿DIPSky open source edition is licensed under DIPSky Public License Version 3.0 ("NPL"). 
+Please find more info here: http://www.DIPSky.com/licensev3.aspx

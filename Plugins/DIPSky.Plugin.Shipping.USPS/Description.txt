@@ -1,0 +1,8 @@
+﻿Group: Shipping rate computation
+FriendlyName: USPS (US Postal Service)
+SystemName: Shipping.USPS
+Version: 1.19
+SupportedVersions: 3.20
+Author: DIPSky team
+DisplayOrder: 1
+FileName: DIPSky.Plugin.Shipping.USPS.dll

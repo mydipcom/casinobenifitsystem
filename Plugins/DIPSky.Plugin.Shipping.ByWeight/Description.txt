@@ -1,0 +1,8 @@
+﻿Group: Shipping rate computation
+FriendlyName: Shipping by weight
+SystemName: Shipping.ByWeight
+Version: 1.32
+SupportedVersions: 3.20
+Author: DIPSky team
+DisplayOrder: 1
+FileName: DIPSky.Plugin.Shipping.ByWeight.dll

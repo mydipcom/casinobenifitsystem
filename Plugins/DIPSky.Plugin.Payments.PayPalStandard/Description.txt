@@ -1,0 +1,8 @@
+﻿Group: Payment methods
+FriendlyName: PayPal Standard
+SystemName: Payments.PayPalStandard
+Version: 1.18
+SupportedVersions: 3.20
+Author: DIPSky team
+DisplayOrder: 1
+FileName: DIPSky.Plugin.Payments.PayPalStandard.dll

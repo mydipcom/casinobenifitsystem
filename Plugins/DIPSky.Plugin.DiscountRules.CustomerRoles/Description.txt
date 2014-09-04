@@ -1,0 +1,8 @@
+﻿Group: Discount requirements
+FriendlyName: Must be assigned to customer role
+SystemName: DiscountRequirement.MustBeAssignedToCustomerRole
+Version: 1.08
+SupportedVersions: 3.20
+Author: DIPSky team
+DisplayOrder: 1
+FileName: DIPSky.Plugin.DiscountRules.CustomerRoles.dll

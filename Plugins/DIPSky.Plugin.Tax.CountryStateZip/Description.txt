@@ -1,0 +1,8 @@
+﻿Group: Tax providers
+FriendlyName: Tax By Country & State & Zip
+SystemName: Tax.CountryStateZip
+Version: 1.31
+SupportedVersions: 3.20
+Author: DIPSky team
+DisplayOrder: 1
+FileName: DIPSky.Plugin.Tax.CountryStateZip.dll

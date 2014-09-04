@@ -1,0 +1,8 @@
+﻿Group: Misc
+FriendlyName: Facebook shop
+SystemName: Misc.FacebookShop
+Version: 1.03
+SupportedVersions: 3.20
+Author: DIPSky team
+DisplayOrder: 1
+FileName: DIPSky.Plugin.Misc.FacebookShop.dll

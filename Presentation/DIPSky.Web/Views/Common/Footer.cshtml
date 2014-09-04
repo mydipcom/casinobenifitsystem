@@ -1,0 +1,100 @@
+﻿@model FooterModel
+@using DIPSky.Web.Models.Common;
+<div class="clear"></div>
+<div class="footer">
+        <div class="footer-menu-wrapper">
+            <div class="column information">
+                <h3>@T("Footer.Information")</h3>
+                <ul>
+                    @if (Model.SitemapEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("Sitemap")">@T("Sitemap")</a></li>
+                    }
+                    <li><a href="@Url.RouteUrl("Topic", new {SystemName = "shippinginfo"})">@T("ShippingReturns")</a></li>
+                    <li><a href="@Url.RouteUrl("Topic", new {SystemName = "privacyinfo"})">@T("PrivacyNotice")</a></li>
+                    <li><a href="@Url.RouteUrl("Topic", new {SystemName = "conditionsofUse"})">@T("ConditionsOfUse")</a></li>
+                    <li><a href="@Url.RouteUrl("Topic", new {SystemName = "aboutus"})">@T("AboutUs")</a></li>
+                    <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
+                </ul>
+            </div>
+            <div class="column customer-service">
+                <h3>@T("Footer.CustomerService")</h3>
+                <ul>
+                    <li><a href="@Url.RouteUrl("ProductSearch")">@T("Search")</a> </li>
+                    @if (Model.NewsEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("NewsArchive")">@T("News")</a></li>
+                    }
+                    @if (Model.BlogEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("Blog")">@T("Blog")</a></li>
+                    }
+                    @if (Model.ForumEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("Boards")">@T("Forum.Forums")</a></li>
+                    }
+                    @if (Model.RecentlyViewedProductsEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("RecentlyViewedProducts")">@T("Products.RecentlyViewedProducts")</a></li>
+                    }
+                    @if (Model.CompareProductsEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("CompareProducts")">@T("Products.Compare.List")</a></li>
+                    }
+                    @if (Model.RecentlyAddedProductsEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("RecentlyAddedProducts")">@T("Products.NewProducts")</a></li>
+                    }
+                </ul>
+            </div>
+            <div class="column my-account">
+                <h3>@T("Footer.MyAccount")</h3>
+                <ul>
+                    <li><a href="@Url.RouteUrl("CustomerInfo")" class="account">@T("Account.MyAccount")</a></li>
+                    @if (!Model.HideOrders)
+                    {
+                        <li><a href="@Url.RouteUrl("CustomerOrders")">@T("Account.CustomerOrders")</a></li>
+                    }
+                    @if (!Model.HideAddresses)
+                    {
+                        <li><a href="@Url.RouteUrl("CustomerAddresses")" class="">@T("Account.CustomerAddresses")</a></li>
+                    }
+                    @if (Model.ShoppingCartEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("ShoppingCart")">@T("ShoppingCart")</a></li>
+                    }
+                    @if (Model.WishlistEnabled)
+                    {
+                        <li><a href="@Url.RouteUrl("Wishlist")" class="ico-wishlist">@T("Wishlist")</a></li>
+                    }
+                </ul>
+            </div>
+            <div class="column follow-us">
+                <h3>@T("Footer.FollowUs")</h3>
+                <ul>
+                    <li>
+                        <img src="~/Themes/DefaultClean/Content/images/facebook.jpg" />
+                        <img src="~/Themes/DefaultClean/Content/images/d.jpg" />
+                        <img src="~/Themes/DefaultClean/Content/images/g.jpg" />
+                        <img src="~/Themes/DefaultClean/Content/images/s.jpg" />
+                        <img src="~/Themes/DefaultClean/Content/images/t.jpg" />
+                        <img src="~/Themes/DefaultClean/Content/images/tt.jpg" />
+                        <img src="~/Themes/DefaultClean/Content/images/y.jpg" />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-poweredby">
+            <span>@T("Content.CopyrightNotice", DateTime.Now.Year.ToString(), Model.StoreName)</span> <span>Powered by <a href="http://www.DIPSky.com/">DIPSky</a></span>
+            @*Would you like to remove the "Powered by DIPSky" link in the bottom of the footer?
+                Find more info here http://www.DIPSky.com/copyrightremoval.aspx*@
+        </div>
+        <div class="footer-disclaimer">
+          
+        </div>
+        <div class="footer-store-theme">
+            @Html.Action("StoreThemeSelector", "Common")
+        </div>
+        @Html.Action("ChangeDeviceBlock", "Common")
+        @Html.Widget("footer")
+    </div>

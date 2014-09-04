@@ -1,0 +1,8 @@
+﻿@{
+    Layout = "";
+}
+@model DIPSky.Plugin.Payments.PurchaseOrder.Models.PaymentInfoModel
+@using DIPSky.Web.Framework;
+@Html.DIPSkyLabelFor(model => model.PurchaseOrderNumber, false)
+@Html.TextBoxFor(model => model.PurchaseOrderNumber, new { autocomplete = "off" })
+@Html.ValidationMessageFor(model => model.PurchaseOrderNumber)
